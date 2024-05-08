@@ -5,11 +5,12 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 # flask login é quem vai gerenciar a nossa senha
 from flask_login import LoginManager
+import os
 
 
 app = Flask(__name__)  # criando site
 # configurar essa variavel
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///comunidade.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('BANCO_DADOS_URL')
 # fazendo uma senha secreta para a segurança do app
 app.config['SECRET_KEY'] = "a3190c71717b80582c2b580d8bc02528"
 # para armazenar a fotos na pasta fotos_posts
