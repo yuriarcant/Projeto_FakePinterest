@@ -10,7 +10,7 @@ from flask_login import login_required, login_user, logout_user, current_user
 #importando as classes para criar os formularios
 from fakepinterest.forms import FormLogin, FormCriarConta, FormFoto
 from fakepinterest.models import Usuario, Foto
-#vamos usar apra mudar o nome do arquivo pra que nao tenha problema de ter caracteres especiais
+#vamos usar pra mudar o nome do arquivo pra que nao tenha problema de ter caracteres especiais
 from werkzeug.utils import secure_filename
 import os
 
